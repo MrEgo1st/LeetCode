@@ -6,7 +6,10 @@ class Solution {
         Arrays.sort(arr1);
         Arrays.sort(arr2);
 
-        if(Arrays.equals(arr1, arr2)){
+        String str1 = new String(arr1);
+        String str2 = new String(arr2);
+
+        if(str1.equals(str2)){
             return true;
         }
 
