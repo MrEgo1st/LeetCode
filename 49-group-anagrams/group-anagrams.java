@@ -1,6 +1,7 @@
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap <String, List<String> > map = new HashMap<>();
+        if(strs.length == 0) return new ArrayList<>();
 
         for(int i=0; i<strs.length; i++){
             char []arr = strs[i].toCharArray();
@@ -10,17 +11,9 @@ class Solution {
             if(!map.containsKey(key)){
                 map.put(key, new ArrayList<String>());
             }
-            
-                
-                map.get(key).add(strs[i]);
-            
-
+            map.get(key).add(strs[i]);
         }
-
-        
-
         return new ArrayList<>(map.values());
 
-         
     }
 }
